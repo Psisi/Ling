@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style> 
+            table {line-height:45px;} td {align:left;}
+              tr {height: 40px;}
+        </style></head>
+<body>
+    <h1>Auckland Open Registraiton Form</h1>
+        <form action="/ttnz.co.nz">
+            <table>
+            <tr>
+                <td><label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" required></td>
+                <td><label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" required></td>
+        </tr>
+           <tr><td><label for="gender">Gender</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label></td>
+            <td><label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" value="2008-12-12" min="1920-01-01"max="2020-12-31">
+            </td></tr>
+            <tr>
+                <td>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                </td>
+                <td>
+                    <label for="pass">Password:</label>
+                    <input type="password" id="pass" name="password" minlength="6" required>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" style="width:85%;height:50px;">
+                </td>
+            </tr>
+            </table>
+                    <h4>Events</h4>
+<table>
+                    <tr>
+                        <td>1</td>
+            <td>
+                <select autocomplete="off" name="events" id="events" data-placeholder="Select event">
+                    <option value="" selected="" disabled="">Select event</option>
+                    <option value="u13 boySingles">01 Under 13 Boys Singles $12.00</option>
+                    <option value="u13 boydoubles">02 Under13 Boys Doubles $6.00</option>
+                    <option value="u15 boysingles">03 Under 15 Boys Singles $12.00</option>
+                    <option value="u15 boydoubles">04 Under 15 Boys Doubles $6.00</option>
+                    <option value="u18 boysingles">05 Under 18 Boys Singles $12.00</option>
+                    <option value="u18 boysdoubles">06 Under 18 Boys Doubles $6.00</option>
+                    <option value="d grade singles">07 Mens D Grade Singles $14.00</option>
+                    <option value="d grade doubles">08 Mens D Grade Doubles $6.00</option>
+                     </select>
+            </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <select autocomplete="off" name="events" id="events" data-placeholder="Select event">
+                                <option value="" selected="" disabled="">Select event</option>
+                                <option value="u13 boySingles">01 Under 13 Boys Singles $12.00</option>
+                                <option value="u13 boydoubles">02 Under13 Boys Doubles $6.00</option>
+                                <option value="u15 boysingles">03 Under 15 Boys Singles $12.00</option>
+                                <option value="u15 boydoubles">04 Under 15 Boys Doubles $6.00</option>
+                                <option value="u18 boysingles">05 Under 18 Boys Singles $12.00</option>
+                                <option value="u18 boysdoubles">06 Under 18 Boys Doubles $6.00</option>
+                                <option value="d grade singles">07 Mens D Grade Singles $14.00</option>
+                                <option value="d grade doubles">08 Mens D Grade Doubles $6.00</option>
+                                 </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <select autocomplete="off" name="events" id="events" data-placeholder="Select event">
+                                <option value="" selected="" disabled="">Select event</option>
+                                <option value="u13 boySingles">01 Under 13 Boys Singles $12.00</option>
+                                <option value="u13 boydoubles">02 Under13 Boys Doubles $6.00</option>
+                                <option value="u15 boysingles">03 Under 15 Boys Singles $12.00</option>
+                                <option value="u15 boydoubles">04 Under 15 Boys Doubles $6.00</option>
+                                <option value="u18 boysingles">05 Under 18 Boys Singles $12.00</option>
+                                <option value="u18 boysdoubles">06 Under 18 Boys Doubles $6.00</option>
+                                <option value="d grade singles">07 Mens D Grade Singles $14.00</option>
+                                <option value="d grade doubles">08 Mens D Grade Doubles $6.00</option>
+                                 </select>
+                        </td>
+                    </tr><tr>
+                        <td>4</td>
+                        <td>
+                            <select autocomplete="off" name="events" id="events" data-placeholder="Select event">
+                                <option value="" selected="" disabled="">Select event</option>
+                                <option value="u13 boySingles">01 Under 13 Boys Singles $12.00</option>
+                                <option value="u13 boydoubles">02 Under13 Boys Doubles $6.00</option>
+                                <option value="u15 boysingles">03 Under 15 Boys Singles $12.00</option>
+                                <option value="u15 boydoubles">04 Under 15 Boys Doubles $6.00</option>
+                                <option value="u18 boysingles">05 Under 18 Boys Singles $12.00</option>
+                                <option value="u18 boysdoubles">06 Under 18 Boys Doubles $6.00</option>
+                                <option value="d grade singles">07 Mens D Grade Singles $14.00</option>
+                                <option value="d grade doubles">08 Mens D Grade Doubles $6.00</option>
+                                 </select>
+                        </td>
+                    </tr>
+
+                </table>
+                <lable for="remarks"><b>Remarks</b></lable><br>
+                <textarea rows="5" cols="65">Remarks</textarea><br><br>
+                <p>I agree to the tournament regulations.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <input type="radio" id="yes" name="agree">
+             <lable for="yes">Yes</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <input type="radio" id="no" name="agree">
+             <lable for="no">No</lable></p>
+             <input type="submit" value="SUBMIT">
+</form>
+  </body>
+</html>
