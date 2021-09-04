@@ -1,5 +1,6 @@
 body {
     font-size: 18px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 table {
     line-height:35px;
@@ -13,17 +14,24 @@ tr {
 }
 input {
     height: 20px;
+    background-color: cornsilk;
 }
 select {
     height: 25px;
     width: 350px;
+    background-color: cornsilk;
 }
 .remarks {
     font-size: larger;
     font-weight: bold;
+    font-style: italic;
 }
 .text {
     margin-top: 10px;
+    background-color: cornsilk;
+}
+h1{
+    font-size: 160%;
 }
 h1,h2 {
     margin-bottom: 13px;
@@ -32,5 +40,6 @@ h1,h2 {
     height: 30px;
     line-height: 30px;
     font-size: larger;
-    background-color: cornflowerblue;
+    background-color: cornsilk;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
