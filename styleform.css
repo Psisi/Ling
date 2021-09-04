@@ -1,0 +1,36 @@
+body {
+    font-size: 18px;
+}
+table {
+    line-height:35px;
+    border-spacing: 10px 5px;
+} 
+td {
+    text-align:left;
+}
+tr {
+    height: 40px;
+}
+input {
+    height: 20px;
+}
+select {
+    height: 25px;
+    width: 350px;
+}
+.remarks {
+    font-size: larger;
+    font-weight: bold;
+}
+.text {
+    margin-top: 10px;
+}
+h1,h2 {
+    margin-bottom: 13px;
+}
+#submit {
+    height: 30px;
+    line-height: 30px;
+    font-size: larger;
+    background-color: cornflowerblue;
+}

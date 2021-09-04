@@ -5,10 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <style> 
-            table {line-height:45px;} td {align:left;}
-              tr {height: 40px;}
-        </style></head>
+    </head>
+    <link rel="stylesheet" href="styleform.css" />
 <body>
     <h1>Auckland Open Registraiton Form</h1>
         <form action="/ttnz.co.nz">
@@ -40,11 +38,11 @@
             <tr>
                 <td colspan="2">
                     <label for="address">Address:</label>
-                    <input type="text" id="address" name="address" style="width:85%;height:50px;">
+                    <input type="text" id="address" name="address" style="width:83%;height:50px;">
                 </td>
             </tr>
             </table>
-                    <h4>Events</h4>
+            <h2>Events</h2>
 <table>
                     <tr>
                         <td>1</td>
@@ -110,15 +108,15 @@
                         </td>
                     </tr>
 
-                </table>
-                <lable for="remarks"><b>Remarks</b></lable><br>
-                <textarea rows="5" cols="65">Remarks</textarea><br><br>
+                </table><br>
+                <lable for="remarks" class="remarks">Remarks</lable><br>
+                <textarea rows="5" cols="65" class="text">Remarks</textarea><br>
                 <p>I agree to the tournament regulations.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
              <input type="radio" id="yes" name="agree">
              <lable for="yes">Yes</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
              <input type="radio" id="no" name="agree">
              <lable for="no">No</lable></p>
-             <input type="submit" value="SUBMIT">
+             <input type="submit" value="SUBMIT" id="submit">
 </form>
   </body>
 </html>
