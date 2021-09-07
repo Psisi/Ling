@@ -53,7 +53,7 @@ header {
     text-decoration: none; color:rebeccapurple;
 }
 .button:hover {
-    color:blue;
+    color:red;
 }
 .copyright {
     text-align: center; font-size: smaller; line-height: 40%;
