@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog1</title>
+    <style>
+        html {
+            font-family: Georgia, 'Times New Roman', Times, serif; margin: 0px;
+        }
+        header {
+            background-image: url(img/nz.jpg); height: 240px; background-size: 100% 100%;
+        }
+        #nav {
+            height: 20px;
+        }
+        #nav .abc {
+            font-size: 12px; color: white; text-decoration: none; float: right; margin: 5px 15px;
+        }
+        #nav .abc.first {
+            float: left;
+        }
+        #nav .abc:hover {
+            color: blue;
+        }
+        #feature {
+            height: 200px; text-align: center; margin-top: 3px; color: white;
+        }
+        #feature h1 {
+            padding-top: 45px; line-height: 70%;
+        }
+        #feature p {
+            font-size: smaller;
+        }
+        main {
+            height: 440px; width: 1000px; margin: auto;
+        }
+        #list {
+            text-align: left; width: 65%; float: left; margin-right: 30px;
+        }
+        #tags {
+            float: left; width: 25%; text-align: center;
+        }
+        #tags input {
+            width: 100px; height: 30px; text-align: center;
+        }
+        #tags img {
+            width: 130px; height: 160px;
+        }
+        #bottom {
+            background-color:rgb(207, 232, 253); text-align: center; font-family:Verdana, Geneva, Tahoma, sans-serif; 
+            line-height: 15px; padding-top:1px; padding-bottom: 10px;
+        }
+        #bottom .button {
+            border: solid 1px blue; background-color: rgb(133, 201, 247); font-size: 18px; margin-right:20px; padding:5px;
+            text-decoration: none; color:rebeccapurple;
+        }
+        #bottom .button:hover {
+            color: red;
+        }
+        #copyright {
+            text-align: center; font-size: smaller; line-height: 40%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="nav">
+             <a href="#" class="abc first">Ling blog</a>
+             <a href="#" class="abc">Tags</a>
+             <a href="#" class="abc">Portfolio</a>
+             <a href="#" class="abc">About</a>
+             <a href="#" class="abc">Home</a>
+        </div>
+        <div id="feature">
+            <h1>Ling &nbsp;&nbsp;Blog</h1>
+            <p>Loving coding, love sharing</p>
+        </div>
+    </header>
+    <main>
+        <div id="list">
+            <h2>How to communicate between Reactjis components</h2>
+            <p>Strategies for React component communication</p>
+            <p><i>React is an open-source JavaScript library for building user interfaces and often described as "the V in the MVC structure".It is augmented by allowing user to create highly reusable UI component...</i></p>
+            <p><i>Posted by Ling on February 10, 2017</i></p><hr>
+            <h2>Callback function, Single-Threaded Model in JavaScript</h2>
+            <p>Strategies for React component communication</p>
+            <p><i>React is an open-source JavaScript library for building user interfaces and often described as "the V in the MVC structure".It is augmented by allowing user to create highly reusable UI component...</i></p>
+            <p><i>Posted by Ling on May 18, 2018</i></p> 
+        </div>
+        <div id="tags">
+            <hr>
+            <h3>Featured Tags</h3>
+            <input type="text" name="fname" value="JavaScript">
+            <br><br>
+            <h3>About me</h3>
+            <a href="#"><img src="img/portugal2.jpg"></a>
+        </div>
+    </main>
+    <footer>
+        <div id="bottom">
+            <h1>Need help?</h1>
+            <p>Get in touch with us.</p>
+            <a href="#" class="button">Contact us</a>
+            <a href="#" class="button">0800800800</a>
+            <a href="#" class="button">Visit us</a>
+        </div>
+        <hr>
+        <div id="copyright">
+            <p>Copyright@ 2021 Ling's blog. All rights reserved.</p>
+        </div>
+    </footer>       
+</body>
+</html>
