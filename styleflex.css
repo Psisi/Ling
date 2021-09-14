@@ -10,14 +10,13 @@ html {
     background-color: white;
     width: 1050px;
     margin: 3.5rem auto;
+    padding: 1rem 0;
 }
 
 .pricing-table {
-    background-color: beige;
-    margin: 1rem 1rem;
     color: rgb(9, 118, 243);
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
 }
 
 .pricing-plan {
@@ -95,7 +94,6 @@ ul {
 
     .pricing-table {
         width: 100%;
-        margin: 0 0;
         flex-direction: column;
         align-items: center;
         justify-content: center;
