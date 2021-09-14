@@ -1,0 +1,127 @@
+html {
+    width: 100%; 
+    height: 100%;
+    background-color: rgb(183, 224, 250);
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    background-color: white;
+    width: 1050px;
+    height: 680px;
+    margin: 3.5rem auto;
+    position: relative;
+}
+
+.pricing-table {
+    position: absolute;
+    width: 1000px;
+    height: 650px;
+    margin: 1rem 1.7rem;
+    color:rgb(9, 118, 243);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pricing-plan {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-right: 1px solid rgb(183, 204, 218);
+} 
+
+.pricing-plan:nth-child(3) {
+    border: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.pricing-img {
+    width: 200px;
+    height: 200px;  
+    margin-top: 2rem;
+    align-self: center;
+}
+
+.pricing-header {
+    color:rgb(101, 106, 110);
+    height: 2.5rem;  
+}
+
+.pricing-features-item {
+    width: 230px;
+    border-top: 1px solid rgb(183, 204, 218);
+    border-bottom: 1px solid rgb(183, 204, 218);
+    line-height: 4rem;
+}
+
+.pricing-features-item:nth-child(2) {
+    line-height: 1.5rem;
+    height: 5.5rem;
+    border-top: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pricing-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 6rem;
+}
+
+.pricing-button {
+    padding: 1rem 3rem;
+    border: 1px solid rgb(183, 204, 218);
+    border-radius: 0.8rem;
+    background-color: white;
+    font-size: 1.3rem;
+    color: hsl(224, 82%, 63%);
+    text-decoration: none;
+    align-self: center;
+}
+
+.pricing-plan:hover .pricing-button {
+    color: white;
+    background-color: rgb(26, 156, 236);
+}
+
+@media screen and (max-width: 700px) {
+    .container{
+        width: 100%;
+        height: 1950px;
+        margin: 3rem 0;
+    }
+
+    .pricing-table {
+        margin: 0;
+        height: 1930px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pricing-plan {
+        width: 100%;
+        margin: 0;
+        border-right: none;
+        border-bottom: 1px solid rgb(183, 204, 218); 
+    }
+
+    .pricing-features-item {
+        width: 90%;
+    }
+
+    .pricing-features-item:nth-child(2) {  
+        border-top: none;
+        height: 4rem;
+        line-height: 4rem;
+        display: block;
+    }
+}
+    
