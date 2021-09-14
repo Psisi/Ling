@@ -10,7 +10,7 @@ html {
     background-color: white;
     width: 1050px;
     margin: 3.5rem auto;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
 }
 
 .pricing-table {
@@ -110,7 +110,6 @@ ul {
     }
 
     .pricing-features-item:nth-child(2) {  
-        border-top: none;
         height: 4rem;
         line-height: 4rem;
         display: block;
