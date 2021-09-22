@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script>
+        let cal = prompt("please input:").trim();
+        let num1 = parseFloat(cal);
+        let n = String(num1).length;
+        let calPart = cal.slice(n).trim();
+        let oper = calPart[0];
+        let num2 = parseFloat(calPart.slice(1));
+
+        switch (oper){
+            case "+":
+                result = num1 + num2;
+                break;
+            case "-":
+                result = num1 - num2;
+                break;
+            case "*":
+                result = num1 * num2;
+                break;
+            case "/":
+                if(num2 != 0){
+                    result = num1 / num2;
+                    break;
+                }else{
+                    alert("0 cannot be a divisor")
+                }
+            default:
+                alert("The calculation you entered does not meet the requirement.")
+        }
+           
+        alert("The answer is：" + result)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
