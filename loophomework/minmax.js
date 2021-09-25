@@ -7,17 +7,15 @@ for (let num of numberStrings) {
 console.log(numbers);
 
 let largest = numbers[0];
+let smallest = numbers[0];
+
 for (let num of numbers) {
     if (largest < num) {
         largest = num;
-    }   
-}
-console.log(largest);
-
-let smallest = numbers[0];
-for (let num of numbers ) {
-    if (smallest > num) {
+    } else if (smallest > num) {
         smallest = num;
     }
 }
+
+console.log(largest);
 console.log(smallest);

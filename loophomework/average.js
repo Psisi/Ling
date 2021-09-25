@@ -6,10 +6,8 @@ for (let num of numberStrings) {
 }
 console.log(numbers);
 
-let counts = 0;
 let sum = 0;
 for (let num of numbers) {
     sum = sum + num;
-    counts++;
 }
-console.log("The average is:" + sum/counts++);
+console.log("The average is:" + sum/numbers.length);
