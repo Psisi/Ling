@@ -58,7 +58,6 @@ function timesTable() {
 console.log(timesTable());
 
 
-
 let todos = {
     items: ['homework', 'English', 'cooking', 'shopping'],
     list: function () {
