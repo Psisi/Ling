@@ -63,45 +63,44 @@ let movies = [
 
 
 function printMoviesSummary(movies) {
-  let movie = movies.forEach(movie => 
-    console.log(`Name:${movie.name}, Doubanrating:${movie.doubanRating}`));  
+  movies.forEach(movie => 
+  console.log(`Name:${movie.name}, Doubanrating:${movie.doubanRating}`));  
 }
-console.log(printMoviesSummary(movies));
-
+printMoviesSummary(movies);
 
 function populateMoviesAvgRating(movies) {
   let newMovies = movies.map(movie => 
     ({...movie, avgRating: (movie.imdbRating + movie.doubanRating)/2}));
-  console.log(newMovies);
+  return newMovies;
 }
 console.log(populateMoviesAvgRating(movies));
 
 
-function searchMovieByName(movies) {
-  let movie = movies.find(movie => movie.englishName.includes('WALL'));
-  console.log(movie);
+function searchMovieByName(movies, searchText) {
+  let movie = movies.find(movie => movie.englishName.includes(searchText));
+  return movie;
 }
-console.log(searchMovieByName(movies));
+console.log(searchMovieByName(movies, "WALL"));
 
 
-function searchMoviesByType(movies) {
-  let movie = movies.filter(movie => movie.type.includes('爱情'));
-  console.log(movie);
+function searchMoviesByType(movies, movieType) {
+  let movie = movies.filter(movie => movie.type.includes(movieType));
+  return movie;
 }
-console.log(searchMoviesByType(movies));
+console.log(searchMoviesByType(movies, "爱情"));
 
 
 
-function searchMoviesByYear(movies) {
-  let movie = movies.filter(movie => {return (movie.releaseYear >= 1994 && movie.releaseYear <= 2008)});
-  console.log(movie);
+function searchMoviesByYear(movies, startYear, endYear) {
+  let movie = movies.filter(movie => {return (movie.releaseYear >= startYear && movie.releaseYear <= endYear)});
+  return movie;
 }
-console.log(searchMoviesByYear(movies));
+console.log(searchMoviesByYear(movies, 1994, 2008));
 
-function getMovieAvgRatingPerType(movies) {
-  let movie = movies.filter(movie => movie.type.includes('爱情'));
+function getMovieAvgRatingPerType(movies, movieType) {
+  let movie = movies.filter(movie => movie.type.includes(movieType));
   let avgDoubanRating = movie.reduce((sum,movie) => sum + movie.doubanRating, 0)/movie.length;
   let avgImdbRating = movie.reduce((sum, movie) => sum + movie.imdbRating, 0)/movie.length;
-  console.log(`Doubanrating: ${avgDoubanRating},  Imdbrating: ${avgImdbRating}`);
+  return `Doubanrating: ${avgDoubanRating},  Imdbrating: ${avgImdbRating}`;
 }
-console.log(getMovieAvgRatingPerType(movies));
+console.log(getMovieAvgRatingPerType(movies, "爱情"));
