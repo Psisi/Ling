@@ -68,6 +68,7 @@ function printMoviesSummary(movies) {
 }
 printMoviesSummary(movies);
 
+
 function populateMoviesAvgRating(movies) {
   let newMovies = movies.map(movie => 
     ({...movie, avgRating: (movie.imdbRating + movie.doubanRating)/2}));
@@ -77,30 +78,30 @@ console.log(populateMoviesAvgRating(movies));
 
 
 function searchMovieByName(movies, searchText) {
-  let movie = movies.find(movie => movie.englishName.includes(searchText));
-  return movie;
+  let foundmovie = movies.find(movie => movie.englishName.includes(searchText) || movie.name.includes(searchText));
+  return foundmovie;
 }
-console.log(searchMovieByName(movies, "WALL"));
+console.log(searchMovieByName(movies, "阿甘"));
 
 
 function searchMoviesByType(movies, movieType) {
-  let movie = movies.filter(movie => movie.type.includes(movieType));
-  return movie;
+  let matchedmovies = movies.filter(movie => movie.type.includes(movieType));
+  return matchedmovies;
 }
 console.log(searchMoviesByType(movies, "爱情"));
 
 
-
 function searchMoviesByYear(movies, startYear, endYear) {
-  let movie = movies.filter(movie => {return (movie.releaseYear >= startYear && movie.releaseYear <= endYear)});
-  return movie;
+  let matchedmovies = movies.filter(movie => {return (movie.releaseYear >= startYear && movie.releaseYear <= endYear)});
+  return matchedmovies;
 }
 console.log(searchMoviesByYear(movies, 1994, 2008));
 
+
 function getMovieAvgRatingPerType(movies, movieType) {
-  let movie = movies.filter(movie => movie.type.includes(movieType));
-  let avgDoubanRating = movie.reduce((sum,movie) => sum + movie.doubanRating, 0)/movie.length;
-  let avgImdbRating = movie.reduce((sum, movie) => sum + movie.imdbRating, 0)/movie.length;
+  let matchedmovies = movies.filter(movie => movie.type.includes(movieType));
+  let avgDoubanRating = matchedmovies.reduce((sum,movie) => sum + movie.doubanRating, 0)/matchedmovies.length;
+  let avgImdbRating = matchedmovies.reduce((sum, movie) => sum + movie.imdbRating, 0)/matchedmovies.length;
   return `Doubanrating: ${avgDoubanRating},  Imdbrating: ${avgImdbRating}`;
 }
 console.log(getMovieAvgRatingPerType(movies, "爱情"));
