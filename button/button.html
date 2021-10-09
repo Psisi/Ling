@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+</head>
+<body>
+    <div class="buttonBox">
+    </div>
+
+    <script>
+        for (let i =1; i <= 20; i++) {
+            const buttonBox = document.querySelector('.buttonBox'),
+                  btn = document.createElement('button');
+            btn.innerText = `${i}`;
+            buttonBox.appendChild(btn);
+            btn.style.marginLeft = '10px';
+            btn.style.padding ='5PX 15px';
+        }   
+    </script>
+    
+</body>
+</html>
