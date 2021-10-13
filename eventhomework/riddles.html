@@ -56,18 +56,18 @@
         for (let i = 0; i < riddles.length; i++){
             let box = document.createElement('div');
             box.classList.add('question');
-            box.innerHTML = "<h1>"+`第${i+1}题`+"</h1>"+
-                            `${riddles[i].question}`;
+            box.innerHTML = `<h1>第${i+1}题</h1>
+                            <p>${riddles[i].question}</p>`;
             container.appendChild(box);
        
             let boxes = Array.from(document.querySelectorAll('.question'));
             boxes[i].addEventListener('mouseenter', function() {
-                boxes[i].innerHTML = "<h1>"+"回答"+"</h1>"+
-                                    `${riddles[i].answer}`;   
+                boxes[i].innerHTML = `<h1>回答</h1>
+                                    <p>${riddles[i].answer}</p>`;   
             });    
             boxes[i].addEventListener('mouseout', function() {       
-                boxes[i].innerHTML = "<h1>"+`第${i+1}题`+"</h1>"+
-                                     `${riddles[i].question}`;    
+                boxes[i].innerHTML = `<h1>第${i+1}题</h1>
+                                     <p>${riddles[i].question}</p>`;   
             });
         }
     </script>
