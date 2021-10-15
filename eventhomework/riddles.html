@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddles</title>
+    <style>
+        .container {
+            width: 480px;
+            margin: 30px auto;
+            background-color: beige;
+        }
+        .question {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color:lightblue;
+            margin: 10px 20px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <script>
+        const riddles = [
+            {
+                question: '13个人捉迷藏，捉了10个人还剩几个? ',
+                answer: '两个'
+            },
+            {
+                question: '从北京到天津要一小时，火车从北京开往天津，发车半小时后，问火车现在在哪里? ',
+                answer: '铁轨上'
+            },
+            {
+                question: '小赵买一张奖票，中了一等奖，去领奖为什么却不给? ',
+                answer: '还没到领奖日期'
+            },
+            {
+                question: '最不听话的是谁? ',
+                answer: '聋子'
+            },
+            {
+                question: '太平洋中间是什么? ',
+                answer: '平'
+            },
+            {
+                question: '你能以最快速度，把冰变成水吗? ',
+                answer: '把冰字去掉两点，就成了水'
+            },  
+        ]
+
+        const container = document.querySelector('.container');
+        for (let i = 0; i < riddles.length; i++){
+            let box = document.createElement('div');
+            box.classList.add('question');
+            box.innerHTML = `<h1>第${i+1}题</h1>
+                            <p>${riddles[i].question}</p>`;
+            container.appendChild(box);
+       
+            let boxes = Array.from(document.querySelectorAll('.question'));
+            boxes[i].addEventListener('mouseenter', function() {
+                boxes[i].innerHTML = `<h1>回答</h1>
+                                    <p>${riddles[i].answer}</p>`;   
+            });    
+            boxes[i].addEventListener('mouseout', function() {       
+                boxes[i].innerHTML = `<h1>第${i+1}题</h1>
+                                     <p>${riddles[i].question}</p>`;   
+            });
+        }
+    </script>
+</body>
+</html>
