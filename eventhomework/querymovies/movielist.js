@@ -2,20 +2,23 @@ const movieInput = document.querySelector('.movie-input');
 const searchButton = document.querySelector('.search-button');
 const movieList = document.querySelector('.movie-list');
 
+const imageBaseUrl = 'https://image.tmdb.org/t/p/w500/';
+
 searchButton.addEventListener('click', function(e) {
     e.preventDefault();
 
+    let movieName = encodeURIComponent(movieInput.value);
+
     const request = new XMLHttpRequest();
-    let data;
-    const imageBaseUrl = 'https://image.tmdb.org/t/p/w500/';
+    const searchMoiveApi = `https://api.themoviedb.org/3/movie/popular?api_key=71b734c9fe036fa5b36e3d80555e9e37&language=en-US&page=1&include_adult=false&query=${movieName}`;
+    request.open('GET', searchMoiveApi);
 
     request.onload = function() {
         console.log(`Yay, this api succeed`);
-        const data = JSON.parse(this.response);
-        movieName = encodeURIComponent(movieInput.value);
-        let movieInfo = data.results.filter(movie => movie.title.includes(movieName));
 
-        for (let movie of movieInfo) {
+        const data = JSON.parse(this.response);
+
+        for (let movie of data.results) {
             const movieTitle = document.createElement('span');
             movieTitle.innerHTML = `<b>${movie.title}</b>`;
 
@@ -30,13 +33,12 @@ searchButton.addEventListener('click', function(e) {
             
             movieDiv.append(movieTitle, voteAverage, img);
             movieList.append(movieDiv);
-            movieInput.value = "";
         }
+        movieInput.value = "";
     }    
     request.onerror = function() {
         console.log(`Woops, api call failed`);
     }
-})   
-    request.open('GET', 'https://api.themoviedb.org/3/movie/popular?api_key=71b734c9fe036fa5b36e3d80555e9e37&language=en-US&page=1');
     request.send();
+})   
 
