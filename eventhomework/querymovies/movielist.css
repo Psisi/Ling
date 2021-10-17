@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding:0;
+}
+body {
+    background-color: #f1e3b4;
+}
+header {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+header, form {
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input, form button {
+    padding: 0.6rem;
+    font-size: 1.3rem;
+}
+.movie-button {
+    background-color: #ec8353;
+}
+button:hover {
+    background-color: #e7cb76 ;
+}
+.movie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.movie-list {
+    width: 500px;
+    font-size: 1.3rem;
+    padding: 10px 0px;
+    font-weight: bold;
+}
+.movie-list span {
+    padding: 5px 10px;
+}
