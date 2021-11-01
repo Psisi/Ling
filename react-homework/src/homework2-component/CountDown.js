@@ -4,21 +4,21 @@ class CountDown extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            countDown: true
+            displayStopWatch: true
         };
     }
     render() {
         return(
             <div>
-                <p>Stopwatch is {this.state.countDown? "display" : "hided"}</p>
+                <p>Stopwatch is {this.state.displayStopWatch? "display" : "hided"}</p>
                 <button
                     onClick = {() => {
-                        this.setState({countDown: !this.state.countDown});
+                        this.setState({displayStopWatch: !this.state.displayStopWatch});
                     }}
                 >
-                    {this.state.countDown? "Hide Stopwatch": "Show Stopwatch"}
+                    {this.state.displayStopWatch? "Hide Stopwatch": "Show Stopwatch"}
                 </button>
-                {this.state.countDown && (
+                {this.state.displayStopWatch && (
                     <div>
                         <StopWatch setTime = "10"/>
                     </div>
