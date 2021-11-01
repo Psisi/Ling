@@ -1,0 +1,30 @@
+.movie {
+    position: relative;
+    margin: 50px auto;
+  } 
+  .movie img {
+    border-radius: 8px;
+  }
+  .text {
+    position: absolute;
+    bottom: 5px;
+    width: 265px;
+    margin: 10px 10px;
+  }
+  .text p {
+    color: white;
+    font-size: 18px;
+    margin: 8px 0px;
+  }
+  .text .info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  .text .info .date {
+    color: lightgrey;
+  }
+  .text .info .rating {
+    color: red;
+  }
+  
