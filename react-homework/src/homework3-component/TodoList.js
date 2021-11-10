@@ -87,7 +87,7 @@ class TodoList extends React.Component {
 
                         <form onSubmit = {this.handleAddTodo}> 
                             <div className="input-bar">
-                                <input id="input1" type="text" value={this.state.todos.text} onChange= {this.handleInputChange} placeholder="Please input the new Todo"/>
+                                <input id="input1" type="text" value={this.state.currentTodo.text} onChange= {this.handleInputChange} placeholder="Please input the new Todo"/>
                                 <button type="submit">Add</button>
                             </div>
                         </form> 

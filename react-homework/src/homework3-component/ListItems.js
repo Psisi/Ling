@@ -2,9 +2,6 @@ import React, { Component } from "react";
 
 
 class ListItems extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     
     render() {
         
