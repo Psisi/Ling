@@ -1,6 +1,8 @@
 import MoviePoster from "./homework1-component/MoviePoster";
 import CountDown from "./homework2-component/CountDown";
 import StopWatch from './homework2-component/StopWatch';
+import TodoList from './homework3-component/TodoList';
+
 
 function App() {
   return (
@@ -8,8 +10,11 @@ function App() {
     //   alt ="爱上费加罗" title="爱上费加罗 Falling for Figaro" date="3天前" rating="暂无评分">
     // </MoviePoster> 
 
+    // <div>
+    //   <CountDown/>
+    // </div>
     <div>
-      <CountDown/>
+        <TodoList /> 
     </div>
   );
 }
