@@ -1,0 +1,101 @@
+.App {
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    margin: 0px;
+}
+.header {
+    background-image: url(./nz.jpg);
+    height: 240px; 
+    background-size: 100% 100%;
+}
+.nav {
+    height: 20px;
+}
+.nav .menu {
+    font-size: 12px; 
+    color: white; 
+    text-decoration: none; 
+    float: right; 
+    margin: 5px 15px;
+}
+.nav .menu.first {
+    float: left;
+}
+.nav .menu:hover {
+    color: blue;
+}
+.feature {
+    height: 200px; 
+    text-align: center; 
+    margin-top: 3px; 
+    color: white;
+}
+.feature h1 {
+    padding-top: 45px; 
+    line-height: 70%;
+}
+.feature p {
+    font-size: smaller;
+}
+main {
+    height: 440px; 
+    width: 1000px; 
+    margin: auto;
+}
+
+.main {
+    text-align: left; 
+    width: 65%; 
+    float: left; 
+    margin-right: 30px;
+}
+.tags {
+    float: right; 
+    width: 25%; 
+    text-align: center;
+}
+.tags input {
+    width: 100px; 
+    height: 30px; 
+    text-align: center;
+}
+.tags img {
+    width: 130px; 
+    height: 160px;
+}
+.bottom {
+    background-color:rgb(207, 232, 253); 
+    text-align: center; 
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    line-height: 15px; 
+    padding-top:1px; 
+    padding-bottom: 10px;
+}
+.bottom .button {
+    border: solid 1px blue; 
+    background-color: rgb(133, 201, 247); 
+    font-size: 18px;
+    margin-right:20px; 
+    padding:5px;
+    text-decoration: none; 
+    color:rebeccapurple;
+    border-radius: 10px;
+}
+.bottom .button:hover {
+    color: red;
+}
+.copyright {
+    text-align: center; 
+    font-size: smaller; 
+    line-height: 40%;
+}
+.navbar a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 10px;
+    display: inline-block;
+    color: lightblue;
+  }
+  
+.navbar a:hover {
+    text-decoration: underline;
+}
