@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 class MyList extends React.Component {
     
     render() {
@@ -10,7 +9,7 @@ class MyList extends React.Component {
                 {
                     this.props.travelList.map(list => {
                         return ( 
-                            <li key = {list.key}> 
+                            <li key = {list.key} className="item"> 
                                 <h3>{list.title}</h3>
                                 <img src= {list.imgsrc}/>
                             </li>

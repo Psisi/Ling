@@ -99,3 +99,15 @@ main {
 .navbar a:hover {
     text-decoration: underline;
 }
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 1150px;
+    margin: 0px auto;
+}
+.item img {
+    width: 500px;
+    height: 350px;
+    margin: 20px 30px;
+}
