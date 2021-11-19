@@ -1,0 +1,23 @@
+.button {
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 6px 13px;
+    margin: 5px 2px;
+    border-radius: 20px;
+}
+.primary {
+    background-color: red;
+    color: #fff;
+}
+
+.default {
+    background-color: #FFFFFF;
+    color: rgb(105, 104, 104);
+}
+  
+.primary:hover, .default:hover {
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: rgba(255, 0, 0, 0.521);
+}

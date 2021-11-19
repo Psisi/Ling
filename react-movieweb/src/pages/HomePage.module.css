@@ -1,0 +1,92 @@
+.movie-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px 60px;
+} 
+.movie-list > * {
+    margin: 10px 10px;
+}
+.popularmovies {
+  margin: 22px auto;
+  width: 78%;
+  display: flex;
+}
+.popularmovies span {
+  display: inline-block;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 7px 12px;
+  margin: 0px 5px;
+  background-color: #f0f1f3;
+  border-radius: 15px;
+}
+.popularmovies span img {
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+}
+
+.popularmovies span:hover {
+  cursor: pointer;
+  color: whitesmoke;
+  background-color: rgba(255, 0, 0, 0.521);
+  transition: 0.2s ease;
+}
+.ranking-types {
+  margin: 20px 60px;
+}
+.ranking-movietypes {
+  display: inline-block;
+  background-color: #ebedf0;
+  padding: 0px 5px; 
+  border-radius: 25px;
+}
+.type-area, .types, .type-order, .type-subtitle {
+ display: flex;
+ margin-top: 12px;
+}
+.type, .area, .order, .subtitle {
+  font-size: 1.05rem;
+  color: black;
+  font-weight: bold;
+  box-sizing: border-box;
+  width: 4%;
+  line-height: 40px;
+}
+.all-areas, .all-types, .all-subtitiles, .all-orders {
+  width: 96%;
+}
+.all-areas span, .all-types span, .all-subtitiles span, .all-orders span {
+  font-size: 0.92rem;
+  font-weight: bold;
+  display: inline-block;
+  color: rgb(105, 104, 104);
+  padding: 5px 10px;
+  background-color: #f3f5f7;
+  margin: 5px 2px;
+  border-radius: 15px;
+}
+.ranking-movietypes span {
+  font-weight: bold;
+  display: inline-block;
+  color: rgb(105, 104, 104);
+  padding: 6px 13px;
+  background-color: white;
+  margin: 5px 2px;
+  border-radius: 20px;
+}
+
+.ranking-movietypes span:hover,
+.all-areas span:hover, .all-types span:hover,
+.all-subtitiles span:hover, .all-orders span:hover {
+  color: whitesmoke;
+  background-color: rgba(255, 0, 0, 0.521);
+  cursor: pointer;
+}
+
+.ranking-types .active {
+  background-color: red;
+  color: white;
+}

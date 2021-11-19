@@ -1,0 +1,25 @@
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px ;
+    width: 580px;
+    margin: 10px auto;
+    padding-left: 15px;
+    background-color: #ebedf0;
+    border: 0 solid #ebedf0;
+    border-radius: 25px ;
+}
+.search input {
+    font-size: 0.95rem;
+    background-color: #ebedf0;;
+    border: 0 solid #ebedf0;
+    flex-grow: 1;
+}
+.search .searchbtn {
+    width: 54px;
+    height: 54px;
+}
+.search .searchbtn img {
+    width: 100%;
+}
