@@ -1,0 +1,33 @@
+.card img {
+    height: 150px;
+    width: 110px;
+    border-radius: 10px;
+    
+}
+.card {
+    position: relative;
+}
+.card div {
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+}
+.card span {
+    text-decoration: none;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    top: 0px;
+    right: 0px;
+    color: white;
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    line-height: 30px;
+}    

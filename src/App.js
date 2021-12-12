@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/header/Header';
+import HomePage from './components/pages/HomePage';
+import AboutPage from './components/pages/AboutPage';
+import LoginPage from './components/pages/LoginPage';
+import LogoutPage from './components/pages/LogoutPage';
+import ProfilePage from './components/pages/ProfilePage';
+import SignupPage from './components/pages/SignupPage';
+import MovieDetailPage from './components/pages/MovieDetailPage';
+import SearchDetailPage from './components/pages/SearchDetailPage';
 import './App.css';
+import { ThemeContextProvider } from './components/context/ThemeContext';
+import React, { useState } from 'react';
 
 function App() {
+  const [theme, setTheme] = useState('light');
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThemeContextProvider value={{theme, updateTheme:setTheme}}>
+        <Header />
+        <div className='container'>
+          <Routes>
+            <Route path='/' element={<HomePage/>}/>
+            <Route path='/about' element={<AboutPage/>}/>
+            <Route path='/login' element={<LoginPage/>}/>
+            <Route path='/logout' element={<LogoutPage/>}/>
+            <Route path='/profile' element={<ProfilePage/>}/>
+            <Route path='/signup' element={<SignupPage/>}/>
+            <Route path='/movie-detail/:id' element={<MovieDetailPage/>}/>
+            <Route path='/search-detail' element={<SearchDetailPage/>}/>
+          </Routes>
+        </div>
+      </ThemeContextProvider>
     </div>
   );
 }
