@@ -1,6 +1,5 @@
 import { useSearchParams } from 'react-router-dom';
 import React, { useContext, useEffect, useState } from 'react';
-import { withRouter } from '../hoc/withRouter';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import styles from './MovieDetailPage.module.css';
@@ -8,14 +7,14 @@ import { ThemeContext } from '../context/ThemeContext';
 
 const MovieDetailPage = (props) => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const origin = searchParams.get('from');
+  const movieId = searchParams.get('id');
   const [ movie, setMovie ] = useState({});
   const { theme } = useContext(ThemeContext);
   const navigate = useNavigate();
   const themeClass = theme === 'light' ? styles.light: styles.dark;
 
   useEffect(async () => {
-    const movieId = props.params.id;
+    
     const res = await axios.get (`https://api.themoviedb.org/3/movie/${movieId}?api_key=71b734c9fe036fa5b36e3d80555e9e37&language=en-US&page=1`);
     setMovie(res.data);
   },[])
@@ -66,4 +65,4 @@ const MovieDetailPage = (props) => {
   
 }
 
-export default withRouter(MovieDetailPage);
+export default MovieDetailPage;

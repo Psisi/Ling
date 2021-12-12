@@ -23,6 +23,7 @@
 .search button {
     width: 45px;
     height: 45px;
+    background-color: #ebedf0;
     border: none;
     cursor: pointer;
 }

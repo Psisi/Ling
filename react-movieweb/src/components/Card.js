@@ -7,7 +7,7 @@ const Card = (props) => {
     const imageBaseUrl = "https://image.tmdb.org/t/p/w500/";
     const {title,image,id,order} = props;
     return (
-        <Link to = {`/movie-detail/${id}`}>
+        <Link to = {`/movie-detail?id=${id}`}>
             <div className = {styles.card}>
                 <img alt="" src={`${imageBaseUrl}${image}`}/>
                 <div>{title}</div>
