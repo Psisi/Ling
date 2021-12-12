@@ -11,7 +11,7 @@ const SearchCard = (props) => {
       
         <div className = {styles.detail}>
             <div className = {styles.picture}> 
-                <Link to = {`/movie-detail/${id}?from=/search-detail`}>  
+                <Link to = {`/movie-detail?id=${id}`}>  
                     <img src = {`${imageBaseUrl}${image}`}/>
                 </Link>
                 <div className = {styles.header}>
@@ -19,7 +19,7 @@ const SearchCard = (props) => {
                     <span className = {styles.rating}>{rating}/10</span>
                 </div>
                 <p>上映日期: {date}</p>
-                <Link to = {`/movie-detail/${id}?from=search`}>
+                <Link to = {`/movie-detail?id=${id}`}>
                     <h2>更多信息</h2>
                 </Link>
             </div>
