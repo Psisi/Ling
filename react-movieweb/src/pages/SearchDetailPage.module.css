@@ -1,0 +1,30 @@
+.light {
+    background-color: white;
+  }
+  
+.dark {
+    background-color: #555;
+}
+
+.content {
+    width: 91%;
+    margin: 2px auto;
+}
+
+.content a {
+    color: rgb(58, 56, 56);
+    text-decoration: none;
+}
+.content a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+.content h3 {
+    color: red;
+    text-align: center;
+    line-height: 20px;
+}
+.card {
+    display: flex;
+    flex-flow: row wrap;
+}

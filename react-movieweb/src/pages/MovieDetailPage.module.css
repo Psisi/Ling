@@ -10,6 +10,7 @@
 .picture a:hover {
     color: blue;
     text-decoration: underline;
+    cursor: pointer;
 }
 .picture img {
     width: 400px;
@@ -55,5 +56,19 @@
     display: inline-block;
     font-size: 22px;
     width: 150px;
-    height: 50px;
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
+    background-color: rgba(102, 96, 96, 0.658);
+    color: white;
+    border-radius: 20px;
+}
+.light {
+    background-color: white;
+  }
+  
+.dark {
+    background-color: #555;
 }
