@@ -1,0 +1,59 @@
+.content {
+    margin: 20px 70px;
+    padding-right: 30px;
+    display: flex;
+}
+.picture a {
+    color: rgb(58, 56, 56);
+    text-decoration: none;
+}
+.picture a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+.picture img {
+    width: 400px;
+    height: 530px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.picture h2 {
+    text-align: center;
+    width: 250px;
+    height: 60px;
+    line-height: 50px;
+    background-color: rgba(231, 33, 33, 0.842);
+    color: whitesmoke;
+    cursor: pointer;
+    letter-spacing: 5px;
+    border-radius: 20px;
+    margin-left: 70px;
+}
+.details {
+    margin: 30px 50px;
+}
+.header {
+    display: flex;
+}
+.header .name {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: bold;
+}
+.header .rating {
+    display: inline-block;
+    font-size: 23px;
+    font-weight: bold;
+    margin-left: 30px;
+    color: rgba(231, 33, 33, 0.842);;
+    line-height: 40px;
+}
+.statistic {
+    margin-top: 30px;
+}
+.item span {
+    display: inline-block;
+    font-size: 22px;
+    width: 150px;
+    height: 50px;
+}
