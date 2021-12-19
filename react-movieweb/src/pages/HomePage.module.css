@@ -97,3 +97,22 @@
 .dark {
   background-color: #555;
 }
+.movie-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px 56px;
+}
+.loading {
+  display: block;
+  width: 160px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 20px;
+  margin: 30px auto;
+}
+.loading:hover{
+  cursor: pointer;
+}

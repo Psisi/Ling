@@ -5,7 +5,6 @@ import styles from './SearchCard.module.css';
 const SearchCard = (props) => {
     const {title, image, rating, date, id } = props;
     const imageBaseUrl = "https://image.tmdb.org/t/p/w500/";
-    const url = encodeURIComponent(`/search-detail?`)
 
     return (
       

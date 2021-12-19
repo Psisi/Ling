@@ -1,8 +1,10 @@
-import React, { useContext } from 'react';
+import axios from 'axios';
+import React, { useContext, useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import ButtonGroup from '../components/Button/ButtonGroup';
 import Search from '../components/Search';
 import Card from '../components/Card';
+import HomePageCard from '../components/HomePageCard';
 import styles from './HomePage.module.css';
 import img from '../../src/flame.png';
 import { ThemeContext } from '../context/ThemeContext';
@@ -22,6 +24,20 @@ const HomePage = (props) => {
         '音乐', '历史', '战争', '运动', '歌舞', '同性', '真人秀', '儿童', '西部', '脱口秀', '灾难', '情色', '古装', '武侠', '舞台艺术', '黑色电影', 
         'Adult', 'Reality-TV', '戏曲', 'Game-show', '纪录片', '鬼怪', 'News', '荒诞']
 
+    const [count, setCount] = useState(1);
+    const [cardMovie, setCardMovie] = useState([]);
+    useEffect(async() => {
+        const res = await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=71b734c9fe036fa5b36e3d80555e9e37&language=en-US&page=1`);
+        setCardMovie(res.data.results);
+    },[]);
+
+    const onClick = async() => {
+        setCount(count+1);
+        const res = await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=71b734c9fe036fa5b36e3d80555e9e37&language=en-US&page=${count}`);
+        const movie = res.data.results;
+        const loadingMovies = cardMovie.concat(movie);
+        setCardMovie(loadingMovies);
+    }
         return(
             <div className = {themeClass}>
                 <Search/>
@@ -84,6 +100,14 @@ const HomePage = (props) => {
                         </div>
                     </div>
                 </div>
+                <div className = {styles['movie-card']}>
+                    { cardMovie? cardMovie.map(movie => (
+                        <HomePageCard key={movie.id} image={movie.poster_path} id={movie.id} date={movie.release_date} rating={movie.vote_average}/>
+                    )):"没找到任何电影"}
+                </div>
+                
+                <button className = {styles.loading} onClick= {onClick} >加载更多</button>
+                
             </div>
         )
 }

@@ -1,6 +1,5 @@
 import { useSearchParams } from 'react-router-dom';
 import React, { useState, useEffect, useContext } from 'react';
-import { withRouter } from '../hoc/withRouter';
 import axios from 'axios';
 import { ThemeContext } from '../context/ThemeContext';
 import styles from './SearchDetailPage.module.css';
@@ -17,7 +16,6 @@ const SearchDetailPage = (props) => {
   
     useEffect(async () => {
         
-        // const movieKeyword = searchParams.get('keyword');
         const url = `https://api.themoviedb.org/3/search/movie?api_key=71b734c9fe036fa5b36e3d80555e9e37&language=en-US&page=1&include_adult=false&query=${movieKeyword}`;
         const res = await axios.get(url);
         const searchResults = res.data.results;
@@ -41,4 +39,4 @@ const SearchDetailPage = (props) => {
         </div>
     )
 } 
-export default withRouter(SearchDetailPage);    
+export default SearchDetailPage;    
