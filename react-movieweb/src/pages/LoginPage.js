@@ -35,7 +35,6 @@ const LoginPage = () => {
     userNameRef.current.focus();
   }, []);
   useEffect(() => {
-    debugger
     if(isLoggedIn()) {
       navigate('/');
     }
