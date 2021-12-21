@@ -14,7 +14,7 @@ class Menu extends Component {
                 </div>
                 <div className="feature">
                     <h1>Ling &nbsp;&nbsp;Blog</h1>
-                    <p>Loving coding, love sharing</p>
+                    <p>Loving traveling, love sharing</p>
                 </div>
             </header>
         )

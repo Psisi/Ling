@@ -12,7 +12,13 @@
     font-size: small;
     font-weight: bold;
     position: absolute;
-    bottom: 5px;
+    width: 90px;
+    height: 18px;
+    text-align: center;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    bottom: 8px;
     left: 10px;
 }
 .card span {
@@ -31,3 +37,6 @@
     text-align: center;
     line-height: 30px;
 }    
+.card div:hover {
+    overflow: visible;
+}

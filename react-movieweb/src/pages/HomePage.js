@@ -1,41 +1,56 @@
-import React, { Component } from 'react';
+import axios from 'axios';
+import React, { useContext, useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import ButtonGroup from '../components/Button/ButtonGroup';
 import Search from '../components/Search';
 import Card from '../components/Card';
+import HomePageCard from '../components/HomePageCard';
 import styles from './HomePage.module.css';
 import img from '../../src/flame.png';
+import { ThemeContext } from '../context/ThemeContext';
 
-class HomePage extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            movies:[]
-        };
+const HomePage = (props) => {
+    
+    const movies = useSelector((state) => state.movie.movies.slice(0,10));
+
+    const { theme } = useContext(ThemeContext);
+    const themeClass = theme === 'light'? styles.light : styles.dark;
+
+    const popularmoives = ['鱿鱼游戏', '扫黑风暴', '失控玩家', '绝命毒师', '速度与激情9', '全裸导演', '灵媒', '进击的巨人', '浴血黑帮', '黑寡妇']
+    const countriesname = ['新加坡', '泰国', '中国香港特别行政区', '马来西亚', '印度', '菲律宾', '捷克', '匈牙利', '南非', '澳大利亚', '英国', 
+        '以色列', '斯洛伐克', '俄罗斯', '冰岛', '立陶宛', '罗马尼亚', '墨西哥', '希腊', '阿根廷', '加拿大', '德国', '日本', '瑞士', '巴西', '土耳其',
+        '比利时', '意大利', '韩国', '西班牙', '荷兰', '哥伦比亚', '乌克兰', '美国', '瑞典', '法国', '葡萄牙', '波兰']
+    const movietypes = ['剧情', '喜剧', '惊悚', '动作', '爱情', '犯罪', '动画', '记录', '冒险', '恐怖', '科幻', '奇幻', '悬疑', '家庭', '传记', '短片', 
+        '音乐', '历史', '战争', '运动', '歌舞', '同性', '真人秀', '儿童', '西部', '脱口秀', '灾难', '情色', '古装', '武侠', '舞台艺术', '黑色电影', 
+        'Adult', 'Reality-TV', '戏曲', 'Game-show', '纪录片', '鬼怪', 'News', '荒诞']
+
+    const [count, setCount] = useState(1);
+    const [cardMovie, setCardMovie] = useState([]);
+    useEffect(async() => {
+        const res = await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=71b734c9fe036fa5b36e3d80555e9e37&language=en-US&page=1`);
+        setCardMovie(res.data.results);
+    },[]);
+
+    const onClick = async() => {
+        setCount(count+1);
+        const res = await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=71b734c9fe036fa5b36e3d80555e9e37&language=en-US&page=${count}`);
+        const movie = res.data.results;
+        const loadingMovies = cardMovie.concat(movie);
+        setCardMovie(loadingMovies);
     }
-    onDataChange = (data) => {
-        this.setState({movies: data? data.slice(0,10) : []});
-    }
-    render() {
-        const popularmoives = ['鱿鱼游戏', '扫黑风暴', '失控玩家', '绝命毒师', '速度与激情9', '全裸导演', '灵媒', '进击的巨人', '浴血黑帮', '黑寡妇']
-        const countriesname = ['新加坡', '泰国', '中国香港特别行政区', '马来西亚', '印度', '菲律宾', '捷克', '匈牙利', '南非', '澳大利亚', '英国', 
-            '以色列', '斯洛伐克', '俄罗斯', '冰岛', '立陶宛', '罗马尼亚', '墨西哥', '希腊', '阿根廷', '加拿大', '德国', '日本', '瑞士', '巴西', '土耳其',
-            '比利时', '意大利', '韩国', '西班牙', '荷兰', '哥伦比亚', '乌克兰', '美国', '瑞典', '法国', '葡萄牙', '波兰']
-        const movietypes = ['剧情', '喜剧', '惊悚', '动作', '爱情', '犯罪', '动画', '记录', '冒险', '恐怖', '科幻', '奇幻', '悬疑', '家庭', '传记', '短片', 
-            '音乐', '历史', '战争', '运动', '歌舞', '同性', '真人秀', '儿童', '西部', '脱口秀', '灾难', '情色', '古装', '武侠', '舞台艺术', '黑色电影', 
-            'Adult', 'Reality-TV', '戏曲', 'Game-show', '纪录片', '鬼怪', 'News', '荒诞']
         return(
-            <div>
+            <div className = {themeClass}>
                 <Search/>
                 <div className={styles.popularmovies}>
                     {popularmoives.map(movie => (
                         <span key={movie}><img src={img}/>{movie}</span>
                     ))}
                 </div>
-                <ButtonGroup onDataChange = {this.onDataChange} />
+                <ButtonGroup />
                 <div className = {styles['movie-list']}>
-                    {this.state.movies.map((movie, index) => (
+                    { movies? movies.map((movie, index) => (
                         <Card key={movie.id} title={movie.title} image={movie.poster_path} id ={movie.id} order={index+1}/>
-                    ))}
+                    )) : "没找到任何电影"}
                 </div>
                 <div className= {styles['ranking-types']}>
                     <span className={styles['ranking-movietypes']}>
@@ -85,8 +100,16 @@ class HomePage extends Component {
                         </div>
                     </div>
                 </div>
+                <div className = {styles['movie-card']}>
+                    { cardMovie? cardMovie.map(movie => (
+                        <HomePageCard key={movie.id} image={movie.poster_path} id={movie.id} date={movie.release_date} rating={movie.vote_average}/>
+                    )):"没找到任何电影"}
+                </div>
+                
+                <button className = {styles.loading} onClick= {onClick} >加载更多</button>
+                
             </div>
         )
-    }
 }
+HomePage.contextType = ThemeContext;
 export default HomePage;

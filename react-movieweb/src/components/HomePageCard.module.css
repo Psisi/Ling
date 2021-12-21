@@ -1,0 +1,30 @@
+.card img {
+    height: 430px;
+    width: 300px;
+    border-radius: 10px;   
+}
+.card {
+    margin-top: 20px;
+    margin-right: 25px;
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    color: darkgray;
+}
+.date {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.rating {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.rating span:first-child {
+    color: red;
+}
+.card:hover {
+    transition: 0.6s;
+    transform: scale(1.05);
+}

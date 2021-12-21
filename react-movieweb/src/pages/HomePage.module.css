@@ -1,15 +1,15 @@
 .movie-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 20px 60px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px 56px;
 } 
 .movie-list > * {
-    margin: 10px 10px;
+  margin: 10px 8px;
 }
 .popularmovies {
   margin: 22px auto;
-  width: 78%;
+  width: 81%;
   display: flex;
 }
 .popularmovies span {
@@ -89,4 +89,30 @@
 .ranking-types .active {
   background-color: red;
   color: white;
+}
+.light {
+  background-color: white;
+}
+
+.dark {
+  background-color: #555;
+}
+.movie-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px 56px;
+}
+.loading {
+  display: block;
+  width: 160px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 20px;
+  margin: 30px auto;
+}
+.loading:hover{
+  cursor: pointer;
 }

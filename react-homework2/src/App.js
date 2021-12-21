@@ -7,11 +7,7 @@ import AboutMe from './Components/AboutMe';
 function App() {
   return (
     <div className="App">
-      <div className="navbar">
-        <Link to="/">Ling's blog</Link>
-        <Link to="/about">About</Link>
-        
-      </div>
+    
       <Routes>
         <Route path="/" element= {<MyBlog/>} />
         <Route path="about" element= {<AboutMe/>} /> 
