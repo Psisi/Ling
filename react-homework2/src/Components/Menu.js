@@ -10,7 +10,7 @@ class Menu extends Component {
                     <Link to="/tag" className="menu">Tags</Link>
                     <Link to="/portfolio" className="menu">Portfolio</Link>
                     <Link to="/about" className="menu">About</Link>
-                    <Link to="/home" className="menu">Home</Link>
+                    <Link to="/" className="menu">Home</Link>
                 </div>
                 <div className="feature">
                     <h1>Ling &nbsp;&nbsp;Blog</h1>
