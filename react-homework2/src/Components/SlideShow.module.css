@@ -1,0 +1,59 @@
+.content {
+    width: 600px;
+    height: 420px;
+    position: relative;
+}
+.content img {
+    width: 600px;
+    height: 420px;
+}
+.prev {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(-135deg);
+    position: absolute;
+    top: 45%;
+    left:30px;
+    
+}
+.next {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 45%;
+    right:30px;
+}
+.dotGroup {
+    position: absolute;
+    left: 40%;
+    bottom: 20px;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 3px;
+    background-color: none;
+    box-shadow: 1px 1px 1px 0px #1a1a1a;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active {
+    height: 15px;
+    width: 15px;
+    margin: 0 3px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 0px #1a1a1a;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}

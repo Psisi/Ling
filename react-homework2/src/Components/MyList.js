@@ -1,23 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
+import SlideShow1 from "./SlideShow1";
 
-class MyList extends React.Component {
-    
-    render() {
-        
-        return (
-            <ul className="items">
-                {
-                    this.props.travelList.map(list => {
-                        return ( 
-                            <li key = {list.key} className="item"> 
-                                <h3>{list.title}</h3>
-                                <img src= {list.imgsrc}/>
-                            </li>
-                        )
-                    })
-                }
-            </ul>
-        )
-    }
+const MyList = (props) => {   
+     
+    return (
+        <ul className="items">
+            {props.travelList.map(list => {
+                return ( 
+                    <li key = {list.key} className="item"> 
+                        <h3>{list.title}</h3>
+                        <SlideShow1 images= {list.images}/>
+                    </li>
+                )
+                })
+            }
+        </ul>
+    )
 }
 export default MyList;

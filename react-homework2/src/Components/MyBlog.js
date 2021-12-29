@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import Project from "./Project";
-import Menu from './Menu';
-import Footer from './Footer';
 import Tags from "./Tags";
 import img from "../../src/portugal2.jpg";
 
@@ -9,7 +7,6 @@ class MyBlog extends Component {
     render() {
         return (
             <div>
-                <Menu/>
                 <main>
                     <div className="main">
                         <Project 
@@ -28,7 +25,6 @@ class MyBlog extends Component {
                     </div> 
                     <Tags value = "Let's go" img= {img}/>
                 </main>
-                <Footer/>
             </div>
         )
     
