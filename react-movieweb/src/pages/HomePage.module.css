@@ -15,6 +15,10 @@
 .popularmovies span {
   display: inline-block;
   color: black;
+  /* width: 120px;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; */
   font-size: 0.9rem;
   font-weight: 500;
   padding: 7px 12px;

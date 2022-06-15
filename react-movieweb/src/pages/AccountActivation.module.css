@@ -1,0 +1,16 @@
+.container {
+    margin: 30px auto;
+    width: 60%;
+    background-color: aliceblue;
+  }
+  .container p {
+    margin-bottom: 20px;
+  }
+  .container button {
+    width: 600px;
+    height: 60px;
+    color: aliceblue;
+    background-color: rgb(22, 87, 22);
+    text-align: center;
+  }
+  

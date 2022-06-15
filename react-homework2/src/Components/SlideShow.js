@@ -5,7 +5,7 @@ const SlideShow = (props) => {
     return (
         <div>
           <SimpleImageSlider
-            width={600}
+            width={580}
             height={420}
             images={images}
             showBullets={true}

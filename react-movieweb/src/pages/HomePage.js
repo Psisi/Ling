@@ -16,7 +16,7 @@ const HomePage = (props) => {
     const { theme } = useContext(ThemeContext);
     const themeClass = theme === 'light'? styles.light : styles.dark;
 
-    const popularmoives = ['鱿鱼游戏', '扫黑风暴', '失控玩家', '绝命毒师', '速度与激情9', '全裸导演', '灵媒', '进击的巨人', '浴血黑帮', '黑寡妇']
+    const popularmovies = ['蜘蛛俠', '鱿鱼游戏', '失控玩家', '绝命毒师', '速度与激情9', '全裸导演', '灵媒', '进击的巨人', '浴血黑帮', '黑寡妇']
     const countriesname = ['新加坡', '泰国', '中国香港特别行政区', '马来西亚', '印度', '菲律宾', '捷克', '匈牙利', '南非', '澳大利亚', '英国', 
         '以色列', '斯洛伐克', '俄罗斯', '冰岛', '立陶宛', '罗马尼亚', '墨西哥', '希腊', '阿根廷', '加拿大', '德国', '日本', '瑞士', '巴西', '土耳其',
         '比利时', '意大利', '韩国', '西班牙', '荷兰', '哥伦比亚', '乌克兰', '美国', '瑞典', '法国', '葡萄牙', '波兰']
@@ -42,7 +42,7 @@ const HomePage = (props) => {
             <div className = {themeClass}>
                 <Search/>
                 <div className={styles.popularmovies}>
-                    {popularmoives.map(movie => (
+                    {popularmovies.map(movie => (
                         <span key={movie}><img src={img}/>{movie}</span>
                     ))}
                 </div>
