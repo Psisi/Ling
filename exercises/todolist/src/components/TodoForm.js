@@ -7,7 +7,7 @@ function TodoForm(props) {
 
   useEffect(() => {
     inputRef.current.focus();
-  });
+  },[]);
 
   const handleChange = (e) => {
     setInput(e.target.value);
@@ -15,7 +15,7 @@ function TodoForm(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+ 
     props.onSubmit({
       id: Math.floor(Math.random() * 10000),
       text: input,
